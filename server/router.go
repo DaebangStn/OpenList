@@ -76,6 +76,8 @@ func Init(e *gin.Engine) {
 	api.POST("/auth/login/ldap", handles.LoginLdap)
 	auth.GET("/me", handles.CurrentUser)
 	auth.POST("/me/update", handles.UpdateCurrent)
+	auth.GET("/me/ui_state", handles.GetUIState)
+	auth.POST("/me/ui_state", handles.SetUIState)
 	auth.GET("/me/sshkey/list", handles.ListMyPublicKey)
 	auth.POST("/me/sshkey/add", handles.AddMyPublicKey)
 	auth.POST("/me/sshkey/delete", handles.DeleteMyPublicKey)
