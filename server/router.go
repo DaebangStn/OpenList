@@ -202,6 +202,8 @@ func fsAndShare(g *gin.RouterGroup) {
 
 func _fs(g *gin.RouterGroup) {
 	g.Any("/search", middlewares.SearchIndex, handles.Search)
+	handles.WarmPathIndex()
+	g.GET("/find", handles.FindPaths)
 	g.GET("/history", handles.ListViewHistory)
 	g.POST("/history/add", handles.AddViewHistory)
 	g.POST("/history/delete", handles.DeleteViewHistory)
