@@ -16,6 +16,9 @@ const (
 	AllowIndexed = "allow_indexed"
 	AllowMounted = "allow_mounted"
 	RobotsTxt    = "robots_txt"
+	// PathJumpBase is the directory that relative paths typed into the
+	// web UI path palette resolve against.
+	PathJumpBase = "path_jump_base"
 
 	Logo                           = "logo" // multi-lines text, L1: light, EOL: dark
 	Favicon                        = "favicon"
